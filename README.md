@@ -1,12 +1,9 @@
-# TickoaTTwo
+# Super Tic Tac Toe
 
-Tic Tac Toe **2**
+[Idea](https://www.youtube.com/shorts/_Na3a1ZrX7c)
 
-[Idea](https://www.youtube.com/watch?v=ePxrVU4M9uA)
+<img src="https://github.com/kubgus/super-tic-tac-toe/assets/53797257/966e681c-4082-4346-b0ef-7eda1b086879" width="500px">
 
-<img src="https://user-images.githubusercontent.com/53797257/210118155-2ba40905-20f2-41a0-a753-5aa6eb7ad496.png" width="500px">
+<img src="https://github.com/kubgus/super-tic-tac-toe/assets/53797257/59b7355a-a9e9-434d-a2a9-ee300de5dda9" width="500px">
 
-<img src="https://user-images.githubusercontent.com/53797257/210118216-d0d92a4a-d9d0-4efe-b655-b17b3e67e570.png" width="500px">
-
-<img src="https://user-images.githubusercontent.com/53797257/210118267-0ea17208-7790-4837-818c-d3db54f4eb6e.png" width="500px">
-
+<img src="https://github.com/kubgus/super-tic-tac-toe/assets/53797257/b3b53454-2ef4-4837-9580-709039c4b23f" width="500px">
