@@ -61,7 +61,7 @@ for (const cell of Cells) {
 
                 // lock fields
                 removeTemporaryClasses();
-                if (!Game.children[cell_index].classList.contains(Players[opposite(turn)].color_name)) {
+                if (!Game.children[cell_index].classList.contains("red") && !Game.children[cell_index].classList.contains("blue")) {
                     for (const field of Fields) {
                         if (Array.from(field.parentElement.children).indexOf(field) != cell_index) {
                             field.classList.add("locked");
