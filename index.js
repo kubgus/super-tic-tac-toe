@@ -87,38 +87,39 @@ function play(cell, field) {
             playing = false;
         }
     }
+}
 
-    function setTurnText(text) {
-        TurnTextTop.innerHTML = text;
-        TurnTextBottom.innerHTML = text;
+function setTurnText(text) {
+    TurnTextTop.innerHTML = text;
+    TurnTextBottom.innerHTML = text;
+}
+
+function getTurnText(symbol, color) {
+    return `↓ <span style="color:${color};">${symbol}</span> ↓`
+}
+
+function checkPlaceable(cell, field) {
+    return !cell.classList.contains("red") && !cell.classList.contains("blue") &&
+        !field.classList.contains("red") && !field.classList.contains("blue") &&
+        !field.classList.contains("locked");
+}
+
+function removeTemporaryClasses() {
+    for (const testedField of Fields) {
+        if (testedField.classList.contains("locked")) testedField.classList.remove("locked");
     }
+}
 
-    function getTurnText(symbol, color) {
-        return `↓ <span style="color:${color};">${symbol}</span> ↓`
-    }
+function opposite(turn) {
+    return turn == 0 ? 1 : 0;
+}
 
-    function checkPlaceable(cell, field) {
-        return !cell.classList.contains("red") && !cell.classList.contains("blue") &&
-            !field.classList.contains("red") && !field.classList.contains("blue") &&
-            !field.classList.contains("locked");
-    }
+TurnTextTop.addEventListener("click", randomPlace);
+TurnTextBottom.addEventListener("click", randomPlace);
 
-    function removeTemporaryClasses() {
-        for (const testedField of Fields) {
-            if (testedField.classList.contains("locked")) testedField.classList.remove("locked");
-        }
-    }
-
-    function opposite(turn) {
-        return turn == 0 ? 1 : 0;
-    }
-
-    TurnTextTop.addEventListener("click", randomPlace);
-    TurnTextBottom.addEventListener("click", randomPlace);
-
-    function randomPlace() {
-        const random_field = Game.children[Math.floor(Math.random() * 9)];
-        const random_cell = random_field.children[Math.floor(Math.random() * 9)];
-        if (checkPlaceable(random_cell, random_field)) play(random_cell, random_field);
-        else randomPlace();
-    }
+function randomPlace() {
+    const random_field = Game.children[Math.floor(Math.random() * 9)];
+    const random_cell = random_field.children[Math.floor(Math.random() * 9)];
+    if (checkPlaceable(random_cell, random_field)) play(random_cell, random_field);
+    else randomPlace();
+}
